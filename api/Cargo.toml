@@ -1,0 +1,28 @@
+[package]
+name = "microservice-qr-codes"
+version = "0.0.1"
+authors = ["ebar0n"]
+edition = "2018"
+
+[dependencies]
+actix-web = "2.0.0"
+actix-rt = "1.0.0"
+actix-service = "1.0.0"
+actix-files = "0.2.1"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+json = "0.12"
+
+log = "0.4"
+env_logger = "0.7"
+
+chrono = "0.4.10"
+qrcode = "0.12.0"
+image = "0.23.3"
+uuid = { version = "0.8.1", features = ["serde", "v4"] }
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+test = true
